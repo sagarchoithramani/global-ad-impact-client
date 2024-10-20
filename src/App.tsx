@@ -1,7 +1,31 @@
 import "./App.css";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-	return <div className="bg-red-500">Hello from GlobalAdImpact</div>;
+	return (
+		<>
+			<Navbar />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route
+					path="/about"
+					element={<h2 className="pt-20">About page</h2>}
+				/>
+				<Route
+					path="/services"
+					element={<h2 className="pt-20">Services page</h2>}
+				/>
+				<Route
+					path="/contact"
+					element={<h2 className="pt-20">Contact page</h2>}
+				/>
+			</Routes>
+			<Footer />
+		</>
+	);
 }
 
 export default App;
