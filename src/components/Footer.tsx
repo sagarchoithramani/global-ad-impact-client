@@ -71,30 +71,30 @@ const Footer = () => {
 							</h2>
 							<div className="flex justify-center lg:justify-start space-x-4 mt-2">
 								<a
-									href="#"
+									href="https://www.facebook.com/people/Global-AdImpact/61564052496664/?is_tour_dismissed"
 									aria-label="Facebook"
-									className="text-gray-400 hover:text-blue-500 transition duration-200"
+									className="text-gray-400 hover:text-[#1877F2] transition duration-200"
 								>
 									<Facebook size={20} />
 								</a>
 								<a
-									href="#"
+									href="https://www.linkedin.com/company/global-adimpact/about/?viewAsMember=true"
 									aria-label="LinkedIn"
-									className="text-gray-400 hover:text-blue-700 transition duration-200"
+									className="text-gray-400 hover:text-[#0077B5] transition duration-200"
 								>
 									<Linkedin size={20} />
 								</a>
 								<a
-									href="#"
+									href="https://x.com/globaladimpact"
 									aria-label="Twitter"
-									className="text-gray-400 hover:text-blue-400 transition duration-200"
+									className="text-gray-400 hover:text-[#1da1f2] transition duration-200"
 								>
 									<Twitter size={20} />
 								</a>
 								<a
-									href="#"
+									href="https://www.instagram.com/globaladimpact/"
 									aria-label="Instagram"
-									className="text-gray-400 hover:text-pink-600 transition duration-200"
+									className="text-gray-400 hover:text-[#E1306C] transition duration-200"
 								>
 									<Instagram size={20} />
 								</a>
@@ -106,7 +106,7 @@ const Footer = () => {
 				{/* Footer Bottom */}
 				<div className="mt-8 border-t border-gray-700 pt-4">
 					<p className="text-center text-gray-500 text-sm">
-						&copy; {new Date().getFullYear()} Global Ad Impact. All
+						&copy; {new Date().getFullYear()} Global AdImpact. All
 						rights reserved.
 					</p>
 				</div>

@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
 					<img
 						src={HeroImg}
 						alt="GAI"
-						className="w-full h-auto max-w-xs md:max-w-[80%] lg:w-11/12 rounded-lg object-cover border-2 border-gray-500"
+						className="w-full h-auto max-w-xs md:max-w-[80%] lg:w-[75%] rounded-lg object-cover"
 					/>
 				</div>
 

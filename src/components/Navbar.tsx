@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../assets/logo.webp";
+import Logo from "../assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar: React.FC = () => {
@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
 				<div className="flex justify-between items-center h-16 lg:h-20">
 					{/* Logo */}
 					<div className="flex-shrink-0">
-						<img src={Logo} alt="Logo" className="h-8 w-auto" />
+						<img src={Logo} alt="Logo" className="h-12 w-auto" />
 					</div>
 
 					{/* Menu for larger screens */}
