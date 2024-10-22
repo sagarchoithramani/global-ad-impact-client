@@ -3,7 +3,7 @@ import Billboard from "../assets/billboard.webp";
 const About = () => {
 	return (
 		<div className="bg-[#0f0f0f] pt-16 lg:pt-20 flex justify-center">
-			<div className="w-full md:max-w-[90vw] lg:max-w-[60vw]">
+			<div className="w-full md:max-w-[90vw] lg:max-w-[65vw]">
 				<div className="relative lg:mb-24">
 					<img
 						src={Billboard}

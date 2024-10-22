@@ -58,10 +58,15 @@ const Footer = () => {
 							<h2 className="text-lg font-semibold flex items-center justify-center lg:justify-start mb-2">
 								Address <MapPin className="ml-2" />
 							</h2>
-							<p className="text-gray-400">
+							<a
+								href="https://www.google.com/maps/search/?api=1&query=46+Moti+Sil+Street,+Opp.+Regal+Cinema,+Kolkata+700013"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-gray-400 hover:text-white transition duration-200"
+							>
 								46, Moti Sil Street, Opp. Regal Cinema,
 								Kol-700013.
-							</p>
+							</a>
 						</div>
 
 						{/* Socials */}
