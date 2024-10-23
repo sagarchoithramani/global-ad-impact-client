@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
 		<div className="relative w-full h-screen overflow-hidden bg-[#0f0f0f]">
 			{/* Video Background */}
 			<video
-				className="absolute top-0 right-0 h-full w-full md:w-[75%] object-cover pointer-events-none"
+				className="absolute top-0 right-0 h-full w-full md:w-[75%] object-cover pointer-events-none transform translate-y-[4rem] lg:translate-y-[5rem]"
 				autoPlay
 				loop
 				muted
@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
 			</video>
 
 			{/* Overlay and Content */}
-			<div className="absolute inset-0 flex flex-col-reverse md:flex-row items-center justify-center md:hidden px-4 md:mt-0 md:px-8 md:w-[70%] md:mx-auto h-full pb-5 pt-10 md:pt-0 md:pb-0">
+			<div className="absolute inset-0 flex flex-col-reverse md:flex-row items-center justify-center md:hidden px-4 md:mt-0 md:px-8 md:w-[70%] md:mx-auto h-full pb-5 pt-16 md:pt-0 md:pb-0">
 				<div className="w-[70vw] md:w-1/3 lg:w-2/5">
 					<img
 						src={HeroImg}

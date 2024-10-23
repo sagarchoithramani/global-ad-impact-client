@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
 	const location = useLocation();
 
 	return (
-		<nav className="fixed w-full z-50 bg-black/60 backdrop-blur-lg shadow-md transition-all duration-300">
+		<nav className="fixed w-full z-50 h-16 lg:h-20 bg-black/60 backdrop-blur-lg shadow-md transition-all duration-300">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex justify-between items-center h-16 lg:h-20">
 					{/* Logo */}
