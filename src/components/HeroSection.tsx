@@ -51,16 +51,16 @@ const HeroSection: React.FC = () => {
 
 			{/* HeroSection tablet and pc */}
 			<div className="absolute h-full w-full items-center justify-center px-4 hidden md:flex">
-				<div className="flex gap-10 md:flex-row text-white md:w-[90vw] lg:w-[67vw]">
+				<div className="flex gap-10 md:flex-row md:items-center text-white md:w-[90vw] lg:w-[69vw] md:h-max">
 					<div className="bg-[#0f0f0f] p-5 w-max rounded-xl">
 						<img className="rounded-lg" src={HeroImg} alt="" />
 					</div>
-					<div className="w-full md:w-[90vw] lg:w-[60%] flex md:flex-col justify-evenly">
-						<h1 className="text-2xl font-bold md:text-3xl lg:text-4xl">
+					<div className="w-full md:w-[90vw] lg:w-[80%] xl:w-[75%] 2xl:w-[60%] flex md:flex-col lg:justify-between md:justify-center md:gap-5 h-full">
+						<h1 className="font-bold text-[20px] md:text-[24px] lg:text-[27px] xl:text-[30px] 2xl:text-[37] leading-tight">
 							Enhance Tradition and Innovation for an Exceptional
 							Outdoor Experience
 						</h1>
-						<p className="text-sm md:text-lg lg:text-xl">
+						<p className="text-[14px] md:text-[16px] lg:text-[17px] xl:text-[20px] 2xl:text-[24px] leading-relaxed md:leading-snug">
 							Global AdImpact excels in delivering powerful
 							out-of-home (OOH) advertising through both digital
 							and traditional channels. We combine cutting-edge
