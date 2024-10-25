@@ -1,7 +1,6 @@
 import React from "react";
 import HeroVid from "../assets/herovid.mp4";
 import HeroImg from "../assets/heroimg.webp";
-import { ArrowRight } from "lucide-react";
 
 const HeroSection: React.FC = () => {
 	return (
@@ -27,12 +26,12 @@ const HeroSection: React.FC = () => {
 						className="w-full h-auto max-w-xs md:max-w-[80%] lg:w-[75%] rounded-lg object-cover"
 					/>
 				</div>
-				<div className="w-full md:w-2/3 flex flex-col justify-center items-stretch text-left space-y-3 text-white h-full">
-					<h1 className="text-2xl font-bold md:text-4xl lg:text-5xl">
+				<div className="w-full md:w-2/3 flex flex-col justify-center items-stretch space-y-3 text-white h-full">
+					<h1 className="text-3xl font-bold md:text-5xl lg:text-6xl text-left">
 						Enhance Tradition and Innovation for an Exceptional
 						Outdoor Experience
 					</h1>
-					<p className="text-sm md:text-lg lg:text-xl">
+					<p className="text-sm md:text-lg lg:text-xl text-justify">
 						Global AdImpact excels in delivering powerful
 						out-of-home (OOH) advertising through both digital and
 						traditional channels. We combine cutting-edge technology
@@ -40,12 +39,12 @@ const HeroSection: React.FC = () => {
 						Our solutions are designed to create memorable
 						impressions and drive impactful results.
 					</p>
-					<button className="bg-[#0f0f0f] align-baseline text-gray-200 font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-md border border-gray-500 shadow-md hover:border-white transition-all duration-300 flex items-center space-x-2 group relative overflow-hidden w-max">
+					{/* <button className="bg-[#0f0f0f] align-baseline text-gray-200 font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-md border border-gray-500 shadow-md hover:border-white transition-all duration-300 flex items-center space-x-2 group relative overflow-hidden w-max">
 						<span className="text-sm sm:text-base group-hover:text-white transition-all duration-300">
 							Boost Your Brand Visibility Now
 						</span>
 						<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 transition-transform duration-300 group-hover:translate-x-2 motion-safe:animate-pulse" />
-					</button>
+					</button> */}
 				</div>
 			</div>
 
@@ -60,7 +59,7 @@ const HeroSection: React.FC = () => {
 						/>
 					</div>
 					<div className="w-full md:w-[90vw] lg:w-[80%] xl:w-[75%] 2xl:w-[60%] flex md:flex-col lg:justify-between md:justify-center md:gap-5 h-full">
-						<h1 className="font-bold text-[20px] md:text-[24px] lg:text-[27px] xl:text-[30px] 2xl:text-[37] leading-tight">
+						<h1 className="font-bold text-[20px] md:text-[24px] lg:text-[28px] xl:text-[33px] 2xl:text-[37] leading-tight">
 							Enhance Tradition and Innovation for an Exceptional
 							Outdoor Experience
 						</h1>
@@ -73,12 +72,12 @@ const HeroSection: React.FC = () => {
 							create memorable impressions and drive impactful
 							results.
 						</p>
-						<button className="bg-[#0f0f0f] align-baseline text-gray-200 font-medium py-3 px-6 rounded-md border border-gray-500 shadow-md hover:border-white transition-all duration-300 flex items-center space-x-2 group relative overflow-hidden w-max">
+						{/* <button className="bg-[#0f0f0f] align-baseline text-gray-200 font-medium py-3 px-6 rounded-md border border-gray-500 shadow-md hover:border-white transition-all duration-300 flex items-center space-x-2 group relative overflow-hidden w-max">
 							<span className="group-hover:text-white transition-all duration-300">
 								Boost Your Brand Visibility Now
 							</span>
 							<ArrowRight className="w-5 h-5 text-gray-400 transition-transform duration-300 group-hover:translate-x-2 motion-safe:animate-pulse" />
-						</button>
+						</button> */}
 					</div>
 				</div>
 			</div>

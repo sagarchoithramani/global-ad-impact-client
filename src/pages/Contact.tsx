@@ -19,13 +19,12 @@ const Contact = () => {
 						<h2 className="text-white text-3xl sm:text-4xl lg:text-5xl my-4 text-left">
 							Let's Connect
 						</h2>
-						<p className="text-gray-400 text-base sm:text-lg lg:text-2xl leading-relaxed pb-4 text-left">
+						<p className="text-gray-400 text-base sm:text-lg lg:text-2xl leading-relaxed pb-4 my-12 text-left">
 							Let's sit together and discuss your next advertising
 							campaign.
 						</p>
 						<p className="text-gray-400 text-base sm:text-lg lg:text-2xl leading-relaxed pb-4 text-left">
 							We are available from:
-							<br />
 							<br />
 							<span className="font-bold">Monday - Saturday</span>
 							<br />
