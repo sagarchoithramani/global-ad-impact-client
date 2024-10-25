@@ -11,15 +11,26 @@ const Navbar: React.FC = () => {
 		setIsMenuOpen((prev) => !prev);
 	};
 
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth", // Adds smooth scrolling
+		});
+	};
+
 	const location = useLocation();
 
 	return (
-		<nav className="fixed w-full z-50 h-16 lg:h-20 bg-black/60 backdrop-blur-lg shadow-md transition-all duration-300">
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="flex justify-between items-center h-16 lg:h-20">
+		<nav className="fixed w-full z-50 h-20 lg:h-24 bg-black/60 backdrop-blur-lg shadow-md transition-all duration-300">
+			<div className="max-w-[97vw] mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="flex justify-between items-center h-20 lg:h-24">
 					{/* Logo */}
 					<div className="flex-shrink-0">
-						<img src={Logo} alt="Logo" className="h-12 w-auto" />
+						<img
+							src={Logo}
+							alt="Logo"
+							className="h-12 md:h-16 w-auto"
+						/>
 					</div>
 
 					{/* Menu for larger screens */}
@@ -33,6 +44,7 @@ const Navbar: React.FC = () => {
 												? "/"
 												: item.toLowerCase()
 										}
+										onClick={scrollToTop}
 										className={`text-white hover:text-black hover:bg-white/70 hover:backdrop-blur-lg px-2 py-1 rounded-full font-medium text-lg transition-all duration-200 hover:scale-105 ${
 											location.pathname ===
 												"/" + item.toLowerCase() &&

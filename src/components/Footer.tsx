@@ -17,11 +17,11 @@ const Footer = () => {
 				{/* Container for responsive layout */}
 				<div className="flex flex-col lg:flex-row items-center lg:items-start justify-between">
 					{/* Logo for PC screens */}
-					<div className="lg:mr-8 mb-8 lg:mb-0 flex justify-center lg:justify-start">
+					<div className="lg:mr-8 mb-8 lg:mb-0 flex justify-center lg:justify-start lg:w-[20%]">
 						<img
 							src={Logo}
 							alt="Logo"
-							className="h-12 sm:h-16 lg:h-24 w-auto transition-all duration-300"
+							className="h-12 sm:h-16 lg:h-24 w-full"
 						/>
 					</div>
 

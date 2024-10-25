@@ -19,12 +19,12 @@ const ImageGallery: React.FC = () => {
 			{images.map((image, index) => (
 				<div
 					key={index}
-					className="relative overflow-hidden rounded-lg shadow-lg group w-full lg:w-1/3"
+					className="relative overflow-hidden rounded-lg shadow-lg group w-full lg:w-[45%]"
 				>
 					<img
 						src={image.src}
 						alt={`Image ${index + 1}`}
-						className="w-full h-[35vh] md:h-[65vh] object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+						className="w-full h-[35vh] md:h-[50vh] lg:h-[65vh] aspect-square object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
 					/>
 
 					{/* Text Overlay */}

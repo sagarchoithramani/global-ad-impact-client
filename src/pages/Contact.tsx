@@ -3,19 +3,19 @@ import { SendHorizontal } from "lucide-react"; // Ensure you have this import
 const Contact = () => {
 	return (
 		<div className="bg-[#0f0f0f] pt-16 lg:pt-20 px-4">
-			<div className="md:max-w-[90vw] lg:max-w-[63vw] mx-auto">
-				<h1 className="text-white text-4xl sm:text-5xl lg:text-[5rem] my-4 text-left">
+			<div className="md:max-w-[90vw] lg:max-w-[65vw] mx-auto">
+				<h1 className="text-white text-4xl sm:text-5xl lg:text-[5rem] my-8 md:my-8 lg:my-12 text-left">
 					Contact
 				</h1>
-				<p className="text-gray-400 text-base sm:text-lg lg:text-2xl leading-relaxed pb-10 text-left">
+				<p className="text-gray-400 text-base sm:text-lg lg:text-2xl leading-7 pb-10 md:my-8 lg:my-12 text-left">
 					We welcome the opportunity to connect with you and provide
 					our exceptional service and support. Please do not hesitate
 					to contact us at your convenience. We look forward to
 					hearing from you.
 				</p>
 
-				<div className="flex flex-col lg:flex-row lg:space-x-5 pb-10">
-					<div className="lg:w-1/2">
+				<div className="flex flex-col lg:flex-row lg:justify-between md:mt-8 lg:mt-20 pb-10">
+					<div className="lg:w-[40%]">
 						<h2 className="text-white text-3xl sm:text-4xl lg:text-5xl my-4 text-left">
 							Let's Connect
 						</h2>
@@ -26,16 +26,15 @@ const Contact = () => {
 						<p className="text-gray-400 text-base sm:text-lg lg:text-2xl leading-relaxed pb-4 text-left">
 							We are available from:
 							<br />
+							<br />
 							<span className="font-bold">Monday - Saturday</span>
 							<br />
-							<span className="font-bold">
-								10 a.m. - 7 p.m. IST/GMT +5:30
-							</span>
+							<span className="font-bold">10 a.m. - 7 p.m.</span>
 						</p>
 					</div>
 
 					{/* Form Section */}
-					<div className="lg:w-1/2 bg-[#1c1c1c] rounded-lg p-4 lg:p-6 mt-6 lg:mt-0">
+					<div className="lg:w-[30vw] bg-[#1c1c1c] rounded-lg p-4 lg:p-6 mt-6 lg:mt-0">
 						<h2 className="text-white text-2xl mb-4">
 							Leave a message
 						</h2>

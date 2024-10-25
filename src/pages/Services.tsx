@@ -34,12 +34,12 @@ const servicesArray = [
 
 const Services = () => {
 	return (
-		<div className="bg-[#0f0f0f] pt-16 lg:pt-20 px-4">
+		<div className="bg-[#0f0f0f] pt-20 lg:pt-24 px-4">
 			<div className="md:max-w-[90vw] lg:max-w-[63vw] mx-auto">
-				<h1 className="text-white text-4xl sm:text-5xl lg:text-[5rem] my-4 text-left">
+				<h1 className="text-white text-4xl sm:text-5xl lg:text-[5rem] my-4 md:my-8 lg:my12 text-left">
 					Services
 				</h1>
-				<p className="text-gray-400 text-base sm:text-lg lg:text-2xl leading-relaxed pb-10 text-left">
+				<p className="text-gray-400 text-base sm:text-lg lg:text-2xl md:my-8 lg:my-12 pb-10 text-left leading-7">
 					Discover unparalleled reach with our outdoor advertising
 					agency by leveraging a blend of traditional and digital
 					out-of-home (OOH) advertising. Our approach combines the
@@ -52,13 +52,13 @@ const Services = () => {
 					Partner with us to broaden your reach and capture attention
 					effectively.
 				</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 pb-10">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 pb-12">
 					{servicesArray.map((service) => (
 						<div
 							key={service.name}
 							className="bg-[#1a1a1a] p-4 lg:p-6 rounded-lg"
 						>
-							<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-4 text-left">
+							<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-4 text-center">
 								{service.name}
 							</h2>
 							<div className="border-t border-gray-600 w-full mb-4"></div>

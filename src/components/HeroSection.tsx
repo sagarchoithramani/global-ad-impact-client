@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
 		<div className="relative w-full h-screen overflow-hidden bg-[#0f0f0f]">
 			{/* Video Background */}
 			<video
-				className="absolute top-0 right-0 h-full w-full md:w-[75%] object-cover pointer-events-none transform translate-y-[4rem] lg:translate-y-[5rem]"
+				className="absolute top-0 right-0 h-full w-full md:w-[75%] object-cover pointer-events-none transform translate-y-[5rem] lg:translate-y-[6rem]"
 				autoPlay
 				loop
 				muted
@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
 			</video>
 
 			{/* Overlay and Content */}
-			<div className="absolute inset-0 flex flex-col-reverse md:flex-row items-center justify-center md:hidden px-4 md:mt-0 md:px-8 md:w-[70%] md:mx-auto h-full pb-5 pt-16 md:pt-0 md:pb-0">
+			<div className="absolute inset-0 flex flex-col-reverse md:flex-row items-center justify-center md:hidden px-4 md:mt-0 md:px-8 md:w-[70%] md:mx-auto h-full pb-5 pt-20 lg:pt-24 md:pt-0 md:pb-0">
 				<div className="w-[70vw] md:w-1/3 lg:w-2/5">
 					<img
 						src={HeroImg}
@@ -50,10 +50,14 @@ const HeroSection: React.FC = () => {
 			</div>
 
 			{/* HeroSection tablet and pc */}
-			<div className="absolute h-full w-full items-center justify-center px-4 hidden md:flex">
-				<div className="flex gap-10 md:flex-row md:items-center text-white md:w-[90vw] lg:w-[69vw] md:h-max">
-					<div className="bg-[#0f0f0f] p-5 w-max rounded-xl">
-						<img className="rounded-lg" src={HeroImg} alt="" />
+			<div className="absolute h-full w-full items-center justify-center px-4 hidden md:flex pt-20 lg:pt-24">
+				<div className="flex gap-10 md:flex-row md:items-center text-white md:w-[90vw] lg:w-[69vw] md:h-max ">
+					<div className="bg-[#0f0f0f]/50 backdrop:blur md:p-3 lg:p-5 w-max lg:w-[35%] xl:w-[25%] rounded-xl">
+						<img
+							className="rounded-lg w-full"
+							src={HeroImg}
+							alt=""
+						/>
 					</div>
 					<div className="w-full md:w-[90vw] lg:w-[80%] xl:w-[75%] 2xl:w-[60%] flex md:flex-col lg:justify-between md:justify-center md:gap-5 h-full">
 						<h1 className="font-bold text-[20px] md:text-[24px] lg:text-[27px] xl:text-[30px] 2xl:text-[37] leading-tight">

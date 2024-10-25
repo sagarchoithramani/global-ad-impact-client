@@ -3,21 +3,24 @@ import Billboard from "../assets/billboard.webp";
 const About = () => {
 	return (
 		<div className="bg-[#0f0f0f] pt-16 lg:pt-20 flex justify-center">
-			<div className="w-full md:max-w-[90vw] lg:max-w-[65vw]">
+			<div className="w-full md:max-w-[90vw] lg:max-w-[70vw]">
 				<div className="relative lg:mb-24">
 					<img
 						src={Billboard}
 						alt="Billboard advert"
 						className="w-full lg:max-w-[70%] h-auto lg:h-[45vh]"
 					/>
-					<div className="lg:absolute lg:grid lg:place-items-center left-1/2 bg-[#0f0f0f] lg:p-[7rem] lg:w-[55%] lg:-translate-x-[10%] lg:-translate-y-[75%]">
-						<h1 className="text-white text-4xl sm:text-5xl lg:text-[5rem] px-4 my-4">
+					<div className="lg:absolute lg:grid lg:place-items-start left-1/2 bg-[#0f0f0f] lg:p-[7rem] lg:w-[65%] lg:-translate-x-[10%] lg:-translate-y-[75%]">
+						<h1 className="text-white text-4xl sm:text-5xl lg:text-[5rem] px-4 my-4 text-nowrap">
 							About Us
 						</h1>
 					</div>
 				</div>
 				<div className="px-4">
-					<p className="text-gray-400 text-base sm:text-lg lg:text-2xl leading-relaxed mb-10">
+					<h2 className="text-white text-3xl sm:text-4xl lg:text-5xl pb-8 text-left">
+						All About Global AdImpact
+					</h2>
+					<p className="text-gray-400 text-base sm:text-lg lg:text-2xl leading-relaxed lg:my-10">
 						Global AdImpact is a distinguished advertising agency
 						that offers specialized services in both traditional OOH
 						and digital OOH advertising. Our extensive experience in
