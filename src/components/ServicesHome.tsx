@@ -3,10 +3,11 @@ import BillBoard from "../assets/billboardclip.webp";
 import PoleKiosk from "../assets/polekioskclip.webp";
 import Gantry from "../assets/gantryclip.webp";
 import BusShelter from "../assets/busshelterclip.webp";
+import { Link } from "react-router-dom";
 
 const services = [
 	{ title: "Traffic Booth", img: TrafficBooth },
-	{ title: "Billboard", img: BillBoard },
+	{ title: "Billboards", img: BillBoard },
 	{ title: "Pole Kiosk", img: PoleKiosk },
 	{ title: "Gantry", img: Gantry },
 	{ title: "Bus Shelter", img: BusShelter },
@@ -21,19 +22,25 @@ const ServicesHome = () => {
 				</h2>
 				<div className="flex flex-wrap justify-center gap-8">
 					{services.map((service, index) => (
-						<div
+						<Link
 							key={index}
-							className="bg-[#161616] rounded-lg p-6 flex flex-col items-center lg:transition-transform lg:duration-200 lg:hover:scale-105 w-full sm:w-[48%] md:w-[30%]"
+							className=" rounded-lg p-6 flex flex-col items-center lg:transition-transform lg:duration-200 lg:hover:scale-105 w-full sm:w-[48%] md:w-[30%]"
+							to={"/services"}
+							onClick={() => {
+								window.scrollTo({
+									top: 0,
+								});
+							}}
 						>
 							<img
 								src={service.img}
 								alt={service.title}
-								className="w-20 h-20 mb-4"
+								className="w-24 h-24 mb-4"
 							/>
 							<h3 className="text-xl font-semibold">
 								{service.title}
 							</h3>
-						</div>
+						</Link>
 					))}
 				</div>
 			</div>

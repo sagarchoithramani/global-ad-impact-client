@@ -1,10 +1,57 @@
 import { SendHorizontal } from "lucide-react"; // Ensure you have this import
+import { useState } from "react";
 
 const Contact = () => {
+	const [status, setStatus] = useState<{
+		type: "success" | "error" | "sending" | null;
+		message: string;
+	}>({ type: null, message: "" });
+
+	const handleSubmit = async (e: any) => {
+		e.preventDefault();
+		const formData = new FormData(e.target);
+		const formObject = Object.fromEntries(formData.entries());
+
+		try {
+			setStatus({ type: "sending", message: "Submitting..." });
+			const response = await fetch("https://api.web3forms.com/submit", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					access_key: "8c1dc3df-296d-44ba-93a2-e9509af8c47c", // Replace with your Web3Forms access key
+					...formObject,
+				}),
+			});
+
+			if (response.ok) {
+				setStatus({
+					type: "success",
+					message: "Thanks for submitting!",
+				});
+				e.target.reset();
+			} else {
+				setStatus({
+					type: "error",
+					message: "Submission failed. Please try again.",
+				});
+			}
+		} catch (error) {
+			setStatus({
+				type: "error",
+				message: "Network error. Please try again.",
+			});
+		}
+
+		// Remove status message after 5 seconds
+		setTimeout(() => setStatus({ type: null, message: "" }), 5000);
+	};
+
 	return (
 		<div className="bg-[#0f0f0f] pt-16 lg:pt-20 px-4">
 			<div className="md:max-w-[90vw] lg:max-w-[65vw] mx-auto">
-				<h1 className="text-white text-4xl sm:text-5xl lg:text-[5rem] my-8 md:my-8 lg:my-12 text-left">
+				<h1 className="text-white text-4xl sm:text-5xl lg:text-[5rem] my-8 md:my-8 lg:my-12 text-left md:text-center">
 					Contact
 				</h1>
 				<p className="text-gray-400 text-base sm:text-lg lg:text-2xl leading-7 pb-10 md:my-8 lg:my-12 text-left">
@@ -16,10 +63,10 @@ const Contact = () => {
 
 				<div className="flex flex-col lg:flex-row lg:justify-between md:mt-8 lg:mt-20 pb-10">
 					<div className="lg:w-[40%]">
-						<h2 className="text-white text-3xl sm:text-4xl lg:text-5xl my-4 text-left">
+						<h2 className="text-white text-3xl sm:text-4xl lg:text-5xl my-2 lg:my-4 text-left">
 							Let's Connect
 						</h2>
-						<p className="text-gray-400 text-base sm:text-lg lg:text-2xl leading-relaxed pb-4 my-12 text-left">
+						<p className="text-gray-400 text-base sm:text-lg lg:text-2xl leading-relaxed pb-4 mt-5 md:my-12 text-left">
 							Let's sit together and discuss your next advertising
 							campaign.
 						</p>
@@ -37,7 +84,7 @@ const Contact = () => {
 						<h2 className="text-white text-2xl mb-4">
 							Leave a message
 						</h2>
-						<form className="flex flex-col">
+						<form className="flex flex-col" onSubmit={handleSubmit}>
 							<label
 								className="text-gray-300 mb-1"
 								htmlFor="name"
@@ -46,9 +93,11 @@ const Contact = () => {
 							</label>
 							<input
 								type="text"
+								name="name"
 								id="name"
 								className="bg-[#0f0f0f] text-gray-200 border border-gray-500 rounded-md p-2 mb-4 focus:outline-none focus:border-gray-200 transition ease-in"
 								placeholder="Your Name"
+								required
 							/>
 
 							<label
@@ -59,10 +108,11 @@ const Contact = () => {
 							</label>
 							<input
 								type="email"
+								name="email"
 								id="email"
-								required
 								className="bg-[#0f0f0f] text-gray-200 border border-gray-500 rounded-md p-2 mb-4 focus:outline-none focus:border-gray-200 transition ease-in"
 								placeholder="Your Email"
+								required
 							/>
 
 							<label
@@ -72,10 +122,12 @@ const Contact = () => {
 								Message
 							</label>
 							<textarea
+								name="message"
 								id="message"
-								className="bg-[#0f0f0f] text-gray-200 border border-gray-500 rounded-md p-2 mb-4 focus:outline-none  min-h-[100px] max-h-[200px] focus:border-gray-200 transition ease-in"
+								className="bg-[#0f0f0f] text-gray-200 border border-gray-500 rounded-md p-2 mb-4 focus:outline-none min-h-[100px] max-h-[200px] focus:border-gray-200 transition ease-in"
 								placeholder="Your Message"
 								rows={3}
+								required
 							/>
 
 							{/* Send Button */}
@@ -88,6 +140,21 @@ const Contact = () => {
 								</span>
 								<SendHorizontal className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 transition-transform duration-300 group-hover:translate-x-2 motion-safe:animate-pulse" />
 							</button>
+
+							{/* Status Message */}
+							{status.type && (
+								<p
+									className={`mt-4 text-center text-sm sm:text-base ${
+										status.type === "success"
+											? "text-green-300"
+											: status.type === "sending"
+											? "text-gray-300"
+											: "text-red-400"
+									}`}
+								>
+									{status.message}
+								</p>
+							)}
 						</form>
 					</div>
 				</div>

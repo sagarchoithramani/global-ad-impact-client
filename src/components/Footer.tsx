@@ -21,7 +21,7 @@ const Footer = () => {
 						<img
 							src={Logo}
 							alt="Logo"
-							className="h-12 sm:h-16 lg:h-24 w-full"
+							className="h-12 sm:h-14 lg:h-20 w-auto"
 						/>
 					</div>
 

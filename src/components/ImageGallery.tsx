@@ -1,6 +1,7 @@
 import React from "react";
 import Traditional from "../assets/traditional.webp";
 import Digital from "../assets/digital.webp";
+import { Link } from "react-router-dom";
 
 const ImageGallery: React.FC = () => {
 	const images = [
@@ -28,11 +29,19 @@ const ImageGallery: React.FC = () => {
 					/>
 
 					{/* Text Overlay */}
-					<div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent text-white p-2 text-center cursor-pointer">
+					<Link
+						to={"/services"}
+						className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent text-white p-2 text-center cursor-pointer"
+						onClick={() => {
+							window.scrollTo({
+								top: 0, // Adds smooth scrolling
+							});
+						}}
+					>
 						<p className="text-md md:text-lg lg:text-2xl border-[0.5px] border-[#b3b3b3] rounded-md bg-black/60">
 							{image.text}
 						</p>
-					</div>
+					</Link>
 				</div>
 			))}
 		</div>

@@ -14,7 +14,6 @@ const Navbar: React.FC = () => {
 	const scrollToTop = () => {
 		window.scrollTo({
 			top: 0,
-			behavior: "smooth", // Adds smooth scrolling
 		});
 	};
 
@@ -134,7 +133,10 @@ const Navbar: React.FC = () => {
 											: item.toLowerCase()
 									}
 									className="text-white hover:text-black hover:bg-white/70 hover:backdrop-blur-lg px-2 py-1 rounded-sm text-xl font-medium transition-all duration-200 hover:scale-105"
-									onClick={toggleMenu}
+									onClick={() => {
+										toggleMenu();
+										scrollToTop();
+									}}
 								>
 									{item}
 								</Link>
