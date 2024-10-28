@@ -54,7 +54,7 @@ const Contact = () => {
 				<h1 className="text-white text-4xl sm:text-5xl lg:text-[5rem] my-8 md:my-8 lg:my-12 text-left md:text-center">
 					Contact
 				</h1>
-				<p className="text-gray-400 text-base sm:text-lg lg:text-2xl leading-7 pb-10 md:my-8 lg:my-12 text-left">
+				<p className="text-gray-400 text-base sm:text-lg lg:text-[21px] leading-7 pb-10 md:my-8 lg:my-12 text-left">
 					We welcome the opportunity to connect with you and provide
 					our exceptional service and support. Please do not hesitate
 					to contact us at your convenience. We look forward to

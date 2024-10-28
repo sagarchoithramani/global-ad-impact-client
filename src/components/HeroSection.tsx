@@ -63,7 +63,7 @@ const HeroSection: React.FC = () => {
 							Enhance Tradition and Innovation for an Exceptional
 							Outdoor Experience
 						</h1>
-						<p className="text-[14px] md:text-[16px] lg:text-[17px] xl:text-[20px] 2xl:text-[24px] leading-relaxed md:leading-snug">
+						<p className="text-[14px] md:text-[13px] lg:text-[14px] xl:text-[17px] 2xl:text-[21px] leading-relaxed md:leading-snug">
 							Global AdImpact excels in delivering powerful
 							out-of-home (OOH) advertising through both digital
 							and traditional channels. We combine cutting-edge
