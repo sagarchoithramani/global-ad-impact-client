@@ -1,5 +1,5 @@
 import React from "react";
-import HeroVid from "../assets/herovid.mp4";
+import HeroVid from "../assets/herovidcompressed.mp4";
 import HeroImg from "../assets/heroimg.webp";
 
 const HeroSection: React.FC = () => {
